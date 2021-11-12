@@ -25,30 +25,16 @@ function onInputChange() {
         } else if (country.length > 2 & country.length < 10) {
             const content = flags(country);
             containerRef.innerHTML = content;
-            // containerRef.textContent = {flags.svg};
-        console.log("hello");
         } else {
             const markup = countryList(country);
-console.log(markup);
-containerRef.innerHTML = markup;
-            // containerRef.textContent = countryListRef.insertAdjacentHTML("beforeend", markup);
-        console.log("fuck")
+            containerRef.innerHTML = markup;
      }
-    }).catch(error => {
+    }).catch(() => {
         Notify.failure("Oops, there is no country with that name");
     }).finally(() => {
         
     })
 };
-    
-    // containerRef.textContent.insertAdjacentHTML.fetchCountries();
-    console.log(containerRef.textContent = inputRef.value.trim());
-    // containerRef.textContent.insertAdjacentHTML.fetchCountries;
 }
 
-// в уэл добавить лишки с данными о стране: флаг, название, столица, население и языки.
-// ли флаг и в нем спан имя
-// ли столица
-// ли население
-// ли языки
 

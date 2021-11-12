@@ -18,3 +18,20 @@ body {
   max-width: 320px;
   margin-bottom: 16px;
 }
+
+.country-desc_list {
+list-style: none;
+font-weight: 700;
+}
+
+.country-params_list {
+  font-weight: 400;
+}
+
+.country-name {
+  font-size: 30px;
+}
+.country-name_list {
+  font-size: 20px;
+  font-weight: 400;
+}
