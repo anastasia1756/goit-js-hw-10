@@ -9,16 +9,20 @@ const debounce = require('lodash.debounce');
 const DEBOUNCE_DELAY = 300;
 const inputRef = document.querySelector('#search-box');
 const containerRef = document.querySelector('.country-info');
-const countryListRef = document.querySelector('.country-list');
 
 inputRef.addEventListener('input', debounce(onInputChange, DEBOUNCE_DELAY));
 
-function onInputChange() {
+function onInputChange(e) {
+    
     const searchedCountry = inputRef.value.trim();
     if (inputRef.value === '') {
         containerRef.textContent = '';
         return;
-    } {
+    } 
+    else if(e.data === ' ') {
+        return;
+    }
+    {
     fetchCountries(`${searchedCountry}`).then(country => {
         if (country.length > 10 ) {
             Notify.info("Too many matches found. Please enter a more specific name.");
